@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &37131472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 929980437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &70286037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,6 +404,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260186840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 627810669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &620608427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 6465462051080927649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &627810669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1078,6 +1111,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1318877636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 1522587458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1373009628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 70286037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1376513926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,6 +1370,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452095252}
   m_CullTransparentMesh: 1
+--- !u!114 &1489548888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 4685120131796123353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1522587458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1671,6 +1737,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677385700}
   m_CullTransparentMesh: 1
+--- !u!114 &1961504888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8533462995311547063, guid: 92d684db3d6f02444b9e7d444556dead, type: 3}
+  m_PrefabInstance: {fileID: 700938775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab070172164d9f46884d836bdf0f3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997263012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1782,15 @@ MonoBehaviour:
   restartButton: {fileID: 1452095254}
   buttonText: {fileID: 232471314}
   timer: {fileID: 918098186}
+  wire:
+  - {fileID: 620608427}
+  - {fileID: 1318877636}
+  - {fileID: 260186840}
+  - {fileID: 37131472}
+  - {fileID: 1373009628}
+  - {fileID: 1961504888}
+  - {fileID: 1373009628}
+  - {fileID: 1489548888}
   timerTime: 15
 --- !u!4 &1997263014
 Transform:

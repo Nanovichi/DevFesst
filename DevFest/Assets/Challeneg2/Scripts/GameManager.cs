@@ -19,9 +19,13 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI buttonText;
     [SerializeField]
     private Timer timer;
+    [SerializeField]
+    private Wire[] wire;
 
     [SerializeField]
     private float timerTime = 40f;
+
+  
 
     private void Start()
     {
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
         restartButton.image.enabled = false;
         buttonText.text = "";
         Invoke(nameof(Loose), timerTime);
+        
     }
 
     public void scoring()
@@ -55,7 +60,10 @@ public class GameManager : MonoBehaviour
         winingText.text = "You Lost";
         restartButton.image.enabled = true;
         buttonText.text = "Restart";
-
+       for(int i = 0; i < wire.Length; i++)
+        {
+            Destroy(wire[i]);
+        }
     }
 
 
