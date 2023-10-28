@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Pikes
   - Door
+  - GameManager
+  - PNG
+  - Wall
+  - Ennemies
+  - Weapon1
   layers:
   - Default
   - TransparentFX

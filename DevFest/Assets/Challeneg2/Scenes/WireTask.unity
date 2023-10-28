@@ -1791,7 +1791,7 @@ MonoBehaviour:
   - {fileID: 1961504888}
   - {fileID: 1373009628}
   - {fileID: 1489548888}
-  timerTime: 15
+  timerTime: 16
 --- !u!4 &1997263014
 Transform:
   m_ObjectHideFlags: 0

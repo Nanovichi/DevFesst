@@ -24,11 +24,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private float timerTime = 40f;
+    private bool win;
 
-  
+
 
     private void Start()
     {
+        win = false;
         winingText.text = "";
         restartButton.image.enabled = false;
         buttonText.text = "";
@@ -46,8 +48,10 @@ public class GameManager : MonoBehaviour
             winingText.text = "You Won!";
             restartButton.image.enabled = true;
             buttonText.text = "Restart";
+            win = true;
             Destroy(timer);
-        }
+        }   
+
     }
 
     public void Restart()
@@ -57,13 +61,17 @@ public class GameManager : MonoBehaviour
 
     private void Loose()
     {
-        winingText.text = "You Lost";
-        restartButton.image.enabled = true;
-        buttonText.text = "Restart";
-       for(int i = 0; i < wire.Length; i++)
+        if (!win)
         {
-            Destroy(wire[i]);
+            winingText.text = "You Lost";
+            restartButton.image.enabled = true;
+            buttonText.text = "Restart";
+            for (int i = 0; i < wire.Length; i++)
+            {
+                Destroy(wire[i]);
+            }
         }
+      
     }
 
 
