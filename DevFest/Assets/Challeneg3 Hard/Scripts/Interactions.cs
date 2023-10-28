@@ -10,23 +10,30 @@ public class Interactions : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField]
     private Sprite weaponSprite;
+    [SerializeField]
+    private QuestGiver NPC;
+
+    private Player player;
     private void Start()
     {
-        sprite=GetComponent<SpriteRenderer>();  
+        sprite = GetComponent<SpriteRenderer>();
         eButton.SetActive(false);
         shooting = GetComponent<Shooting>();
+        player = GetComponent<Player>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PNG"))
         {
             eButton.SetActive(true);
+            
         }
-        if (collision.gameObject.CompareTag("Weapon1"))
+        if (collision.gameObject.CompareTag("Weapon1") && player.quests[player.GetIndex()].goal.goaltype == GoalType.FInding)
         {
             Destroy(collision.gameObject);
             shooting.setShoot(true);
             sprite.sprite = weaponSprite;
+            player.quests[player.GetIndex()].isActive = false;
 
         }
     }
@@ -39,5 +46,10 @@ public class Interactions : MonoBehaviour
         }
     }
 
+    private void OnInteract()
+    {
+        NPC.GiveQuest();
+    }
     
+
 }
