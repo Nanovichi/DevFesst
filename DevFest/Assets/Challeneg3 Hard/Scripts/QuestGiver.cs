@@ -16,6 +16,8 @@ public class QuestGiver : MonoBehaviour
     private Button[] questButton;
     [SerializeField]
     private TextMeshProUGUI[] buttonText;
+    [SerializeField]
+    private QuestArrow arrow;
 
 
     private void Start()
@@ -39,7 +41,7 @@ public class QuestGiver : MonoBehaviour
             player.quests.Add(quest[questIndex]);
             questButton[questIndex].image .enabled= true;
             buttonText[questIndex].text = player.quests[questIndex].title;
-
+            arrow.target = quest[questIndex].location;
         }
         if (quest[questIndex].goal.Isreached() || quest[questIndex].goal.GetFound() )
         {

@@ -2353,6 +2353,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325416134}
   m_CullTransparentMesh: 1
+--- !u!114 &1394024835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8879312926545360103, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
+  m_PrefabInstance: {fileID: 3737853322801961994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7716975732727347b40ecf40eb49a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435917471
 GameObject:
   m_ObjectHideFlags: 0
@@ -43007,18 +43018,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1584060339864512069, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1584060339864512069, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1584060339864512069, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 1623098117903762031, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -43031,22 +43030,6 @@ PrefabInstance:
       propertyPath: taskQuest
       value: 
       objectReference: {fileID: 924460755}
-    - target: {fileID: 1695900966211834067, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: weaponSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 28c54d026d2d4ca4894803459a5f6989, type: 3}
-    - target: {fileID: 2020702515670582218, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2121146266689584050, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b35b1b5f4154096439e645d67cc016b6, type: 3}
-    - target: {fileID: 2121146266689584050, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5655534121522627608, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -43091,22 +43074,10 @@ PrefabInstance:
       propertyPath: NPC
       value: 
       objectReference: {fileID: 8985490432159181047}
-    - target: {fileID: 7250931387785372823, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250931387785372823, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: nextLevelXP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250931387785372823, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: quests.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7386952480000211382, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.546875
-      objectReference: {fileID: 0}
+    - target: {fileID: 8879312926545360103, guid: 5d1332ceba46e6848938dd802009003a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 8985490432159181050}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43185,6 +43156,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaskGiver
       objectReference: {fileID: 0}
+    - target: {fileID: 991603547546976190, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548296301335573899, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 1394024835}
     - target: {fileID: 3548296301335573899, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
       propertyPath: player
       value: 
@@ -43280,6 +43259,10 @@ PrefabInstance:
     - target: {fileID: 3548296301335573899, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
       propertyPath: quest.Array.data[1].goal.goaltype
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700339759302596285, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6028888477193698299, guid: 1c2ee096c95fefc4d98c378fa8ce4fa7, type: 3}
       propertyPath: m_LocalPosition.x
