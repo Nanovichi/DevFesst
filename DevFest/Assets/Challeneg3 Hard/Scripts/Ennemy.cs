@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CodeMonkey.Utils;
 using UnityEngine;
 
 public class Ennemy : MonoBehaviour
