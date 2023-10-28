@@ -10,7 +10,7 @@ public class QuestGoal
     [SerializeField]
     private int currentAmount, goalAmount;
     [SerializeField]
-    private bool found;
+    private bool found = false;
 
 
 
@@ -19,6 +19,10 @@ public class QuestGoal
         return (currentAmount >= goalAmount);
     }
 
+    public bool GetFound()
+    {
+        return found;
+    }
 
 
     public void KillEnnemy()
@@ -26,6 +30,11 @@ public class QuestGoal
 
         if (goaltype == GoalType.Killing)
             currentAmount++;
+    }
+
+    public int GetCurent()
+    {
+        return currentAmount;
     }
 
     public void Gathering()
@@ -36,15 +45,12 @@ public class QuestGoal
         }
     }
 
-    public IEnumerator SetFound()
+    public void SetFound()
     {
 
-        if (goaltype == GoalType.FInding)
+        if (goaltype == GoalType.Finding )
         {
-            found = true;
-            yield return new WaitForSeconds(2f);
-            found=false;    
-
+            found = true;  
         }
 
 
@@ -59,7 +65,7 @@ public enum GoalType
 
     Killing,
     Gatherring,
-    FInding,
+    Finding,
 
 }
 

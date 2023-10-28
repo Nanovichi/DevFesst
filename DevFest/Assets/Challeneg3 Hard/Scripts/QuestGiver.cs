@@ -20,8 +20,15 @@ public class QuestGiver : MonoBehaviour
 
     private void Start()
     {
-        questIndex = 0;
-        
+        questIndex = 1;
+        for (int i = 1; i < questButton.Length; i++)
+        {
+            questButton[i].image.enabled = false;
+            buttonText[i].text = "";
+        }
+        questButton[0].enabled = true;
+        buttonText[0].text = player.quests[0].title;
+
     }
 
     public void GiveQuest()
@@ -30,11 +37,11 @@ public class QuestGiver : MonoBehaviour
         {
             quest[questIndex].isActive = true;
             player.quests.Add(quest[questIndex]);
-            questButton[questIndex].enabled = true;
+            questButton[questIndex].image .enabled= true;
             buttonText[questIndex].text = player.quests[questIndex].title;
 
         }
-        if (quest[questIndex].goal.Isreached())
+        if (quest[questIndex].goal.Isreached() || quest[questIndex].goal.GetFound() )
         {
             questIndex++;
         }

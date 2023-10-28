@@ -10,9 +10,12 @@ public class Player : MonoBehaviour
     public List<Quest> quests;
     [SerializeField]
     private QuestGiver NPC;
-    private int curentQUest;
-    
+    public int curentQUest;
 
+    private void Update()
+    {
+        quests[curentQUest].goal.Isreached();
+    }
 
     private void Start()
     {
@@ -20,6 +23,7 @@ public class Player : MonoBehaviour
         level = 1;
         curentQUest = 0;
         quests.Add(NPC.quest[0]);
+        quests[0].isActive = true;
     }
 
     public int GetIndex()
@@ -36,7 +40,7 @@ public class Player : MonoBehaviour
     public void LevelUp(int expaAmount)
     {
         exp += expaAmount;
-        if (exp > nextLevelXP)
+        if (exp >= nextLevelXP)
         {
             level++;
             nextLevelXP *= 2;
@@ -50,12 +54,20 @@ public class Player : MonoBehaviour
         {
             ReachedPlace();
         }
+        if (collision.gameObject.CompareTag("Weapon1"))
+        {
+            ReachedPlace();
+            Debug.Log("Quest2");
+        }
     }
     public void ReachedPlace()
     {
-        if (quests[curentQUest].goal.goaltype == GoalType.FInding && quests[curentQUest].isActive== true)
+        if (quests[curentQUest].goal.goaltype == GoalType.Finding && quests[curentQUest].isActive == true)
         {
-            StartCoroutine(quests[curentQUest].goal.SetFound());
+          
+            LevelUp(quests[curentQUest].expAmount);
+            IncreseMoney(quests[curentQUest].moneyAmount);
+            quests[curentQUest].goal.SetFound();
             quests[curentQUest].isActive = false;
             Debug.Log("Reached");
 
@@ -74,5 +86,4 @@ public class Player : MonoBehaviour
     {
         return health;
     }
-
 }

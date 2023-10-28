@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Interactions : MonoBehaviour
@@ -12,6 +13,9 @@ public class Interactions : MonoBehaviour
     private Sprite weaponSprite;
     [SerializeField]
     private QuestGiver NPC;
+
+    [SerializeField]
+    private TextMeshProUGUI taskQuest;
 
     private Player player;
     private void Start()
@@ -27,13 +31,17 @@ public class Interactions : MonoBehaviour
         {
             eButton.SetActive(true);
             
+
         }
-        if (collision.gameObject.CompareTag("Weapon1") && player.quests[player.GetIndex()].goal.goaltype == GoalType.FInding)
+        if (collision.gameObject.CompareTag("Weapon1") && player.quests[player.GetIndex()].goal.goaltype == GoalType.Finding)
         {
+
+
             Destroy(collision.gameObject);
             shooting.setShoot(true);
             sprite.sprite = weaponSprite;
             player.quests[player.GetIndex()].isActive = false;
+            player.quests[player.GetIndex()].goal.SetFound();
 
         }
     }
@@ -48,6 +56,8 @@ public class Interactions : MonoBehaviour
 
     private void OnInteract()
     {
+        Debug.Log("New QUest");
+        taskQuest.text = "New QUest";
         NPC.GiveQuest();
     }
     

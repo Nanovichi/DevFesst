@@ -13,16 +13,12 @@ public class QuestManager : MonoBehaviour
     private Move move;
 
     [SerializeField]
-    private TextMeshProUGUI title, description, money, exp;
-    [SerializeField]
-    private Button quesButton;
+    private TextMeshProUGUI description, money, exp, completion;
 
-    private int currenQUest;
-
-    [SerializeField]
-    private Quest quest;
     [SerializeField]
     private Player player;
+
+    private int counter;    
 
 
 
@@ -30,7 +26,6 @@ public class QuestManager : MonoBehaviour
     {
         QuestPhone.SetActive(false);
         move = GameObject.FindGameObjectWithTag("Player").GetComponent<Move>();
-        currenQUest = 0;
     }
 
     public void OpenPhone()
@@ -44,14 +39,52 @@ public class QuestManager : MonoBehaviour
 
         QuestPhone.SetActive(false);
         move.enabled = true;
+        description.text = "";
+        money.text = "";
+        exp.text = "";
+        completion.text = "";
+        counter = 0;
+
     }
 
-    public void ShowQuests()
+    public void ShowQuestst1()
     {
-        title.text = player.quests[currenQUest].title;
-        description.text = player.quests[currenQUest].description;
-        money.text = player.quests[currenQUest].moneyAmount.ToString();
-        exp.text = player.quests[currenQUest].expAmount.ToString();
+        if(counter == 0)
+        {
+            description.text = player.quests[0].description;
+            money.text += player.quests[0].moneyAmount.ToString();
+            exp.text += player.quests[0].expAmount.ToString();
+            completion.text += player.quests[0].goal.GetFound();
+        }
+        counter++;
     }
 
+    public void ShowQuestst2()
+    {
+        if(counter == 0)
+        {
+            description.text = player.quests[1].description;
+            money.text += player.quests[1].moneyAmount.ToString();
+            exp.text += player.quests[1].expAmount.ToString();
+            completion.text += player.quests[1].goal.GetFound().ToString();
+        }
+        counter++;
+    }
+
+    public void ShowQuestst3()
+    {
+        if(counter == 0)
+        {
+            description.text = player.quests[2].description;
+            money.text = player.quests[2].moneyAmount.ToString();
+            exp.text = player.quests[2].expAmount.ToString();
+            completion.text = player.quests[0].goal.GetCurent().ToString();
+        }
+        counter++;
+       
+
+
+    }
+
+   
 }

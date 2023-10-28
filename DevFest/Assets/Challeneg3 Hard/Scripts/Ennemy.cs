@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Ennemy : MonoBehaviour
 {
-    [SerializeField]
-    private float dieTime = 120f;
 
     public GameObject munitionPrefab;
 
@@ -31,7 +29,9 @@ public class Ennemy : MonoBehaviour
 
     [SerializeField]
     private float maxoffset = 20f;
-    public AudioClip loopClip;
+    private Player player;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,7 +42,7 @@ public class Ennemy : MonoBehaviour
         health = Random.Range(1, 3);
         speed = Random.Range(1, 6);
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        Destroy(this.gameObject, dieTime);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
     }
     private void Update()
@@ -76,7 +76,7 @@ public class Ennemy : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            Instantiate(munitionPrefab, this.transform.position, Quaternion.identity);
+            player.quests[player.GetIndex()].goal.KillEnnemy();
             Destroy(this.gameObject);
         }
 
