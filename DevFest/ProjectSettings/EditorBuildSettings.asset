@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Challeneg3 Hard/Scenes/Challneg3 Hard.unity
-    guid: 1a91ccf7eb2c4534cbcc3a35806ceb83
+    path: Assets/Challeneg2/Scenes/WireTask.unity
+    guid: e1c5009acf182854b983dab743899c12
   m_configObjects: {}
